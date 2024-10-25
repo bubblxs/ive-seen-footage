@@ -58,7 +58,7 @@ def delete_duped_frames(frame_arr):
             if item2 not in histograms:
                 histograms[item2] = calc_hist(frame2_path)
             
-            h2 = histograms[item2]
+            h2 = histograms.get(item2)
             # compareHist returns a float from 0 to 1
             # 0 means equal, 1 means unequal
             # 0.0; 0.0001; ... ; 0.999; 1.0
